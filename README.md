@@ -16,9 +16,9 @@ Source : https://odan.github.io/2019/11/05/slim4-tutorial.html
 Pour la création d'un usager, ajouter dans le body de la requête l'information en JSON : 
 ```
 {
-    "username" : "mathieu.frechette",
-    "first_name" : "Mathieu",
-    "last_name" : "Fréchette",
-    "email" : "frechette.mathieu@cegepvicto.ca"
+    "username" : "[username]",
+    "first_name" : "[first_name]",
+    "last_name" : "[last_name]",
+    "email" : "[email]"
 }
 ```
