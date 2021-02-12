@@ -84,7 +84,8 @@ final class LoggerFactory
     public function addFileHandler(string $filename, int $level = null): self
     {
         $filename = sprintf('%s/%s', $this->path, $filename);
-        $rotatingFileHandler = new RotatingFileHandler($filename, 0, $level ?? $this->level, true, 0777);
+        $nbFileMax = 7; // Nb de fichiers de log qui seront créé avant d'être supprimé, 0 = illimité
+        $rotatingFileHandler = new RotatingFileHandler($filename, $nbFileMax, $level ?? $this->level, true, 0777);
 
         // The last "true" here tells monolog to remove empty []'s
         $rotatingFileHandler->setFormatter(new LineFormatter(null, null, false, true));
