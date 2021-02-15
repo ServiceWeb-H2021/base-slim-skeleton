@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Base-Slim-Skeleton
+  description: Structure de base d'un api créé dans le cadre du cours Services Web H2021
+  
+servers: 
+  - url: http://localhost/base-slim-skeleton
+paths:
+  /:
+    get:
+      tags:
+        - Livre
+      summary: Message de bienvenue
+      responses:
+        '200': 
+          description: 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                example:
+                    success: true
+                    message : 'Hello world!'
