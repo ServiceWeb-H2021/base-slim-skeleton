@@ -9,5 +9,9 @@ return function (App $app) {
 
     $app->post('/users', \App\Action\UserCreateAction::class);
 
+    // Documentation de l'api
+    $app->get('/docs/v1', \App\Action\Docs\SwaggerUiAction::class);
+
+
 };
 
